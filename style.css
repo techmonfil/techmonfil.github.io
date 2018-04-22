@@ -1,0 +1,78 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: #aee1f9;
+  background-image: linear-gradient(180deg, #D4E8F8 20%, #999999 100%);
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 60px;
+}
+
+.nav-masthead .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(167,167,190)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-masthead .navbar-toggler {
+  border-color: #54545f;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgb(167, 167, 190);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgb(167, 167, 190);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #54545f;
+  border-bottom-color: #54545f;
+}
+
+.container,
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 950px;
+}
+
+.productsection {
+  color: #666666;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+#underfooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background: #151518;
+  padding: 15px 0;
+  color: #777;
+  font-size: 12px;
+}
+#underfooter a {
+  color: #aaa;
+}
+#underfooter a:hover {
+  color: #fff;
+}
+#underfooter p {
+  margin: 0;
+}
