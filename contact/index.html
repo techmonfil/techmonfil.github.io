@@ -7,6 +7,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.46.0/mapbox-gl.css' rel='stylesheet' />
+
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -88,22 +91,22 @@ FAX: 27410-49943
 info@techmonfil.gr
 </address>
 
-<div id="map"></div>
+<div id='map' style='width: 400px; height: 300px;'></div>
 <script>
-  function initMap() {
-    var techmonfil = {lat: 37.926722, lng: 23.067222};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: techmonfil
-    });
-    var marker = new google.maps.Marker({
-      position: techmonfil,
-      map: map
-    });
-  }
-</script>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEctzZ0K9O2PeKJzywlJSLwEh96GxpzfM&callback=initMap">
+  mapboxgl.accessToken = 'pk.eyJ1IjoiaWtvdXRyYXMiLCJhIjoiY2pqbXVvZHQ3NzZybTN2bGZwNXZrNzh2NCJ9.QmvopBXZdvKwnh52peERZQ';
+  var techmonfil = { lng: 23.067222, lat: 37.926722};
+  var map = new mapboxgl.Map({
+    container: 'map',
+    center: [techmonfil.lng, techmonfil.lat],
+    style: 'mapbox://styles/mapbox/streets-v10',
+    zoom: 14
+  });
+  var popup = new mapboxgl.Popup()
+    .setHTML('<h6>TECHMONFIL</h6><h6>Κ. ΤΡΙΑΝΤΗΣ & ΣΙΑ</h6><p><a href="https://goo.gl/maps/4vxkP3Sc8UD2">Directions</a>');
+  var marker = new mapboxgl.Marker()
+    .setLngLat([techmonfil.lng, techmonfil.lat])
+    .setPopup(popup)
+    .addTo(map);
 </script>
 
     </div>
